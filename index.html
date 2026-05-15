@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자운고등학교 급식 메뉴</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍱 자운고등학교 급식</h1>
+            <p>오늘의 맛있는 한 끼를 확인하세요!</p>
+        </header>
+
+        <main class="glass-card">
+            <div class="date-controls">
+                <button id="prevBtn" class="btn">어제</button>
+                <div class="date-picker-wrapper">
+                    <input type="date" id="datePicker" class="date-picker">
+                </div>
+                <button id="nextBtn" class="btn">내일</button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>메뉴를 불러오는 중입니다...</p>
+            </div>
+
+            <div id="menuContainer" class="menu-container">
+                <h2 id="displayDate">날짜를 선택하세요</h2>
+                <div id="calorieInfo" class="calorie-badge hidden"></div>
+                <ul id="menuList" class="menu-list">
+                    <!-- 메뉴 아이템들이 여기에 동적으로 추가됩니다 -->
+                </ul>
+                <div id="emptyMessage" class="empty-message hidden">
+                    <p>😢 이 날은 급식 정보가 없어요.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>데이터 제공: 나이스(NEIS) 교육정보 개방 포털</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
